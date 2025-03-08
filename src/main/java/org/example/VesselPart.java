@@ -1,11 +1,11 @@
 package org.example;
-
+//Esta clase representa un espacio en la matriz que ocuparán las embarcaciones dependiendo de su tamaño, las embarcaciones tendrán un arreglo de VesselPart
+//y dependiendo de su tamaño, este arreglo será de cierto tamaño
 public class VesselPart {
     private int life;
     private int x;
     private int y;
-    private boolean isDamaged;
-
+    private boolean isDamaged = false;
     public VesselPart(int nLife, int nX, int nY){
         life=nLife;
         x=nX;
@@ -21,7 +21,7 @@ public class VesselPart {
         }
         if (life<=0){
             life=0;
-            isDamaged=true;
+            isDamaged = true;
         }
 //En esta función, la parte de la embarcación recibe el daño y se le baja cierta cantidad de vida, depende del daño que reciba.
 //Si la vida llega a cero o menos, la vida será cero y el estado de esta parte del barco será "dañada".
@@ -45,5 +45,8 @@ public class VesselPart {
     }
     public void setY(int y) {
         this.y = y;
+    }
+    public boolean getIsDamaged() {
+        return isDamaged;
     }
 }

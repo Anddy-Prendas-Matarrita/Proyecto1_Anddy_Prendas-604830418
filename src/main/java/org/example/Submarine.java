@@ -1,6 +1,6 @@
 package org.example;
 
-public abstract class Submarine extends Vessel {
+public class Submarine extends Vessel {
     private VesselPart[] vesselPart= new VesselPart[1];
 
     public Submarine(){
